@@ -1,6 +1,6 @@
 export default function Header() {
   return (
-    <header className="bg-white dark:bg-gray-800 text-gray-900 dark:text-white p-4 shadow">
+    <header className="bg-white dark:bg-gray-800 text-gray-900 dark:text-white p-6 shadow">
       <h2 className="text-xl font-semibold">What's The Plan</h2>
     </header>
   );

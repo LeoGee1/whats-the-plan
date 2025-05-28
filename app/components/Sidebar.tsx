@@ -1,10 +1,15 @@
 import { Link, useLocation } from "react-router-dom";
+import {   LayoutDashboard,
+  Calendar,
+  MessageSquare,
+  User, } from "lucide-react";
+
 
 const navItems = [
-  { name: "Dashboard", path: "/" },
-  { name: "Events", path: "routes/events" },
-  { name: "Messages", path: "/messages" },
-  { name: "Profile", path: "/profile" },
+  { name: "Dashboard", path: "/", icon: <LayoutDashboard className="w-5 h-5" /> },
+  { name: "Events", path: "/events", icon: <Calendar className="w-5 h-5" /> },
+  { name: "Messages", path: "/messages", icon: <MessageSquare className="w-5 h-5" /> },
+  { name: "Profile", path: "/profile", icon: <User className="w-5 h-5" /> },
 ];
 
 
@@ -12,17 +17,17 @@ export default function Sidebar() {
   const location = useLocation();
 
   return (
-    <aside className="w-64 bg-gray-800 text-white p-4 h-full sticky top-0">
+    <aside className="w-64 bg-gray-800 text-white p-8 h-full sticky top-0">
       <nav className="space-y-4">
-        {navItems.map(({ name, path }) => (
+        {navItems.map(({ name, path, icon }) => (
           <Link
             key={path}
             to={path}
-            className={`block px-4 py-2 rounded hover:bg-gray-700 ${
-              location.pathname === path ? "bg-gray-700" : ""
-            }`}
+            className={`flex items-center gap-3 px-4 py-2 rounded hover:bg-gray-700 ${
+    location.pathname === path ? "bg-gray-700" : ""
+  }`}
           >
-            {name}
+            {icon} {name}
           </Link>
         ))}
       </nav>

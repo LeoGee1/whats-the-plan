@@ -14,7 +14,7 @@ export default function MainLayout({ children }: MainLayoutProps) {
             <div className="flex flex-1 overflow-hidden">
                 <Sidebar />
                 <main className="flex-1 overflow-y-auto bg-white dark:bg-gray-950 text-gray-900 dark:text-white">
-                    {children}
+                    <Outlet />
                 </main>
             </div>
         </div>
