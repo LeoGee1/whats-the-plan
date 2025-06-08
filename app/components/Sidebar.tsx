@@ -17,7 +17,7 @@ export default function Sidebar() {
   const location = useLocation();
 
   return (
-    <aside className="w-64 bg-gray-800 text-white p-8 h-full sticky top-0">
+    <aside className="w-48 bg-gray-800 text-white px-6 py-5 h-full sticky top-0">
       <nav className="space-y-4">
         {navItems.map(({ name, path, icon }) => (
           <Link
