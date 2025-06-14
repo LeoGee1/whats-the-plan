@@ -8,7 +8,6 @@ import {   LayoutDashboard,
 const navItems = [
   { name: "Dashboard", path: "/", icon: <LayoutDashboard className="w-5 h-5" /> },
   { name: "Events", path: "/events", icon: <Calendar className="w-5 h-5" /> },
-  { name: "Messages", path: "/messages", icon: <MessageSquare className="w-5 h-5" /> },
   { name: "Profile", path: "/profile", icon: <User className="w-5 h-5" /> },
 ];
 

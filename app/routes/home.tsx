@@ -56,7 +56,7 @@ export default function Dashboard() {
   return (
     <MainLayout>
       <div className="p-6 bg-gray-900 text-white min-h-screen">
-        {/* Top boxes */}
+        
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mb-6">
           {[...Array(4)].map((_, i) => (
             <div key={i} className="h-48 bg-gray-800 rounded-xl shadow-sm"></div>
