@@ -50,7 +50,6 @@ export default function Events() {
 
   return (
     <main className="flex-1 bg-white dark:bg-gray-900 text-gray-900 dark:text-white overflow-auto">
-      <MainLayout>
         <div className="p-6">
           <div className="flex justify-between items-center mb-4">
             <h1 className="text-2xl font-bold">All Events</h1>
@@ -72,7 +71,6 @@ export default function Events() {
             ))}
           </div>
         </div>
-      </MainLayout>
     </main>
   );
 }

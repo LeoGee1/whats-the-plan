@@ -30,7 +30,6 @@ export default function ProfilePage() {
 
   return (
     <main className="flex-1 bg-white dark:bg-gray-900 text-gray-900 dark:text-white overflow-auto">
-      <MainLayout>
         <div className="p-6 max-w-3xl mx-auto">
           <h1 className="text-2xl font-bold mb-6">Profile</h1>
 
@@ -58,7 +57,6 @@ export default function ProfilePage() {
             </ul>
           </div>
         </div>
-      </MainLayout>
     </main>
   );
 }
