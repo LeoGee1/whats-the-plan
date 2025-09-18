@@ -1,12 +1,21 @@
 import { type RouteConfig, index, route } from "@react-router/dev/routes";
 
 export default [
-  index("routes/dashboard.tsx"),
-  route("events", "routes/events.tsx"),
-  route("events/new", "routes/events/new.tsx"),
-  route("events/:eventId", "routes/events/[eventId].tsx"),
-  route("profile", "routes/profile.tsx"),
+  // index("routes/dashboard.tsx"),
+
+  //public landing pagr
+  index("routes/landing.tsx"),
+
+  //public auth
   route("auth", "routes/auth/auth.tsx"),
+
+  route("/", "utils/RequireAuth.tsx", [
+    route("dashboard", "routes/dashboard.tsx"),
+    route("events", "routes/events.tsx"),
+    route("events/new", "routes/events/new.tsx"),
+    route("events/:eventId", "routes/events/[eventId].tsx"),
+    route("profile", "routes/profile.tsx"),
+  ]),
 ] satisfies RouteConfig;
 
 

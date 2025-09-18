@@ -23,7 +23,7 @@ const AuthLayout = () => {
           />
           <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-white p-6 text-center">
             <h2
-              className="text-4xl font-lighter mb-4"
+              className="text-4xl font-lighter mb-4 text-white/80"
               style={{ fontFamily: "Pacifico, cursive" }}
             >
               What’s the plan?
@@ -35,7 +35,7 @@ const AuthLayout = () => {
             </p>
             <button
               onClick={toggleMode}
-              className="bg-white text-gray-900 px-6 py-2 rounded-md shadow hover:bg-gray-200 transition"
+              className="bg-white/80 text-gray-900 px-6 py-2 rounded-md shadow hover:bg-gray-200 transition"
             >
               {isSignUp ? "Sign In" : "Sign Up"}
             </button>
@@ -80,7 +80,7 @@ const AuthLayout = () => {
                     <input
                       type="text"
                       placeholder="John Doe"
-                      className="w-full px-4 py-2 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-white rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+                      className="w-full px-4 py-2 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-white  focus:outline-none focus:ring-2 focus:ring-purple-500"
                     />
                   </div>
                 )}
@@ -91,7 +91,7 @@ const AuthLayout = () => {
                   <input
                     type="email"
                     placeholder="email@example.com"
-                    className="w-full px-4 py-2 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-white rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+                    className="w-full px-4 py-2 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-white  focus:outline-none focus:ring-2 focus:ring-purple-500"
                   />
                 </div>
                 <div>
@@ -101,7 +101,7 @@ const AuthLayout = () => {
                   <input
                     type="password"
                     placeholder="********"
-                    className="w-full px-4 py-2 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-white rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+                    className="w-full px-4 py-2 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-white  focus:outline-none focus:ring-2 focus:ring-purple-500"
                   />
                 </div>
                 {isSignUp && (
@@ -112,13 +112,13 @@ const AuthLayout = () => {
                     <input
                       type="password"
                       placeholder="********"
-                      className="w-full px-4 py-2 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-white rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+                      className="w-full px-4 py-2 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-white  focus:outline-none focus:ring-2 focus:ring-purple-500"
                     />
                   </div>
                 )}
                 <button
                   type="submit"
-                  className="w-full bg-purple-800 text-white py-2 rounded-md hover:bg-purple-700 transition"
+                  className="bg-purple-800 text-white/90 py-2 px-14 rounded-md mx-auto block hover:bg-purple-700 transition"
                 >
                   {isSignUp ? "Sign Up" : "Sign In"}
                 </button>
@@ -141,7 +141,7 @@ const AuthLayout = () => {
                 <hr className="flex-grow border-t border-gray-300 dark:border-gray-600" />
               </div>
 
-              <button className="w-full flex items-center justify-center bg-white dark:bg-gray-700 text-gray-800 dark:text-white py-2 rounded-md shadow hover:bg-gray-100 dark:hover:bg-gray-600 transition">
+              <button className="flex items-center justify-center bg-white dark:bg-gray-700 text-gray-800 dark:text-white py-2 px-14 shadow hover:bg-gray-100 mx-auto border-1 border-black dark:hover:bg-gray-600 transition">
                 <FaGoogle className="mr-2" />
                 {isSignUp ? "Sign up with Google" : "Sign in with Google"}
               </button>

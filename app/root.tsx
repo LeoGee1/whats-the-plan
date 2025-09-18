@@ -50,12 +50,18 @@ export default function App() {
   const path = location.pathname;
 
   const isAuthRoute = path.startsWith("/auth");
+  const isDashboardRoute = path.startsWith("/dashboard") || path.startsWith("/events") || path.startsWith("/profile");
 
-  const LayoutComponent = isAuthRoute
-    ? AuthLayout
-    : isAuthenticated()
-    ? MainLayout
-    : AuthLayout; 
+  let LayoutComponent;
+
+  if (isAuthRoute) {
+    LayoutComponent = AuthLayout;
+  } else if (isDashboardRoute && isAuthenticated()) {
+    LayoutComponent = MainLayout;
+  } else {
+    // Landing + other public routes
+    LayoutComponent = ({ children }: { children: React.ReactNode }) => <>{children}</>;
+  }
 
   return (
     <LayoutComponent>
