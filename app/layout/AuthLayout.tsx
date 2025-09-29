@@ -2,11 +2,25 @@ import { Outlet } from "react-router-dom";
 import { useState } from "react";
 import { FaGoogle } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
+import { useSearchParams } from "react-router-dom";
+import { useEffect } from "react";
 
 const AuthLayout = () => {
-  const [isSignUp, setIsSignUp] = useState(true);
-  const toggleMode = () => setIsSignUp(!isSignUp);
+  const [searchParams, setSearchParams] = useSearchParams();
+  const mode = searchParams.get("mode");
 
+
+  useEffect(() => {
+    if (!mode) {
+      setSearchParams({ mode: "signup" });
+    }
+  }, [mode, setSearchParams]);
+
+  const isSignUp = mode !== "signin";
+  
+  const toggleMode = () => {
+    setSearchParams({ mode: isSignUp ? "signin" : "signup" });
+  };
   return (
     <main className="min-h-screen w-full flex items-center justify-center bg-gray-400 dark:bg-gray-900 font-['Inter']">
       <div className="w-full h-screen flex flex-col md:flex-row rounded-md shadow-xl overflow-hidden">

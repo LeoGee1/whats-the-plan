@@ -14,6 +14,7 @@ export default [
     route("events", "routes/events.tsx"),
     route("events/new", "routes/events/new.tsx"),
     route("events/:eventId", "routes/events/[eventId].tsx"),
+    route("pages/:eventPagesId", "pages/[eventPagesId].tsx"),
     route("profile", "routes/profile.tsx"),
   ]),
 ] satisfies RouteConfig;

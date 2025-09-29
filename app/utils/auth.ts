@@ -10,7 +10,7 @@
 export function isAuthenticated() {
   if (typeof window !== 'undefined') {
     // Dev-only bypass
-    if (import.meta.env.DEV) return true;
+    // if (import.meta.env.DEV) return true;
 
     const token = localStorage.getItem('token');
     return !!token;
